@@ -1,4 +1,9 @@
-
+var start = Vue.extend({
+  template: '#start',
+   data: function () {
+      return {name: 'Hello'}
+    },
+});
 
 var router = new VueRouter({
   routes: [
@@ -14,6 +19,4 @@ new Vue({
 });
 
 
-var start = Vue.extend({
-  template: '#start'
-});
+
