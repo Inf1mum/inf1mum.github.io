@@ -103,10 +103,14 @@ h1 {
 
 .next-page{
     float: right;
+    margin-right: 30px;
 }
 .btn-large {
     font-size: 20px;
 }
 .sidenav li>a {
     font-size: 20px;
+}
+.material-icons .right {
+    margin-right: 0px;
 }
