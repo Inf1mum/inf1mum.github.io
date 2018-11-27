@@ -4,246 +4,254 @@
     <meta charset="UTF-8">
     <title>Java lessons</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="row">
 
-        <header>
+        <div class="nav">
+            <ul id="nav-mobile" class="sidenav sidenav-fixed" >
+                <li><img class="img-logo" src="img/logo1.png"></li>
+                <li class="bold waves-effect waves-teal"><router-link to="/">Введение</router-link></li>
+                <li class="bold  waves-effect waves-teal"><router-link to="/lesson/1">Урок №1</router-link></li>
+                <li class="bold waves-effect waves-teal"><router-link to="/lesson/2">Урок №2</router-link></li>
+                <li class="bold waves-effect waves-teal"><router-link to="/lesson/3">Урок №3</router-link></li>
 
-        </header>
 
-        <nav>
+            </ul>
+        </div>
 
-        </nav>
 
-        <div class="content-section">
+
+        <div class="main">
             <router-view></router-view>
         </div>
     </div>
 
     <template id="start">
-        <a href="#content" id="skip-to-content">Skip to the content.</a>
+        <div>
 
-        <header class="page-header" role="banner">
-            <h1 class="project-name">Cayman theme</h1>
-            <h2 class="project-tagline">Cayman is a clean, responsive theme for GitHub Pages.</h2>
+            <header class="page-header" role="banner">
+                <h1 class="project-name">Введение</h1>
+            </header>
+            <div class="main-content">
+                <h1>Java — введение, история и преимущества</h1>
+                <p>Прежде, чем перейти к обучению, начнём с введения в java-программирование, разберёмся, что это за такой язык программирования. Немного истории. Язык Java разработан компанией Sun Microsystems, создателем которого был Джеймс Гослинг, и выпущен в 1995 году в качестве основных компонентов компании Sun Microsystems — Java платформ (Java 1.0 [J2SE]).
+                    По состоянию на 2017 год последней версией Java Standard Edition является 8 (J2SE). С развитием Java, и её широкой популярностью, несколько конфигураций были построены для различных типов платформ. Например: J2EE — приложения для предприятий, J2ME — для мобильных приложений.
+                    Sun Microsystems переименовала прежнюю версию J2 и ввела новые: Java SE, Java EE и Java ME. Введение в программирование Java различных версий подтверждало знаменитый слоган компании «Напиши один раз, запускай везде».</p>
+                <h1>История создания языка Java</h1>
+                <p>История создания языка Java начинается в июне 1991 года, когда Джеймс Гослинг создал проект для использования в одном из своих многочисленных сет-топ проектов. Язык, который рос вне офиса Гослинга, как дуб, Oak - первоначальное название Java до 1995 года, после в дальнейшем история Java продолжалась под именем Green, а позже был переименован как Java.
+                    Но официальной датой создания языка Java считается 23 мая 1995 года, после выпуска компанией Sun первой реализации Java 1.0. Она гарантировала «Напиши один раз, запускай везде», обеспечивая недорогой стоимостью на популярных платформах.
+                    13 ноября 2006 года, Sun выпустила большую часть как свободное и открытое программное обеспечение в соответствии с условиями GNU General Public License (GPL).
+                    После 8 мая 2007 года судьба Java сложилась иначе. Компания завершила процесс, делая все чтобы исходный код был бесплатным и открытым, кроме небольшой части кода, на который компания не имела авторских прав.</p>
+                <h1>Преимущества Java как языка программирования</h1>
+                <p><strong>Объектно-ориентированный:</strong> в Java все является объектом. Дополнение может быть легко расширено, так как он основан на объектной модели.
+                    <br><strong>Платформонезависимый:</strong> в отличие от многих других языков, включая C и C++, Java, когда был создан, он не компилировался в платформе конкретной машины, а в независимом от платформы байт-коде. Этот байт код распространяется через интернет и интерпретируется в Java Virtual Machine (JVM), на которой он в настоящее время работает.
+                    <br><strong>Простой:</strong> процессы изучения и введение в язык программирования Java остаются простыми. Если Вы понимаете основные концепции объектно-ориентированного программирования, то он будет прост для Вас в освоении.
+                    <br><strong>Архитектурно-нейтральным:</strong> компилятор генерирует архитектурно-нейтральные объекты формата файла, что делает скомпилированный код исполняемым на многих процессорах, с наличием системе Java Runtime.
+                    <br><strong>Портативный:</strong> архитектурно-нейтральный и не имеющий зависимости от реализации аспектов спецификаций — все это делает Java портативным. Компилятор в Java написан на ANSI C с чистой переносимостью, который является подмножеством POSIX.
+                    <br><strong>Прочный:</strong> выполняет усилия, чтобы устранить ошибки в различных ситуациях, делая упор в основном на время компиляции, проверку ошибок и проверку во время выполнения.
+                    <br><strong>Многопоточный:</strong> функции многопоточности, можно писать программы, которые могут выполнять множество задач одновременно. Введение в язык Java этой конструктивной особенности позволяет разработчикам создавать отлаженные интерактивные приложения.
+                    <br><strong>Интерпретированный:</strong> Java байт-код переводится на лету в машинные инструкции и нигде не сохраняется. Делая процесс более быстрым и аналитическим, поскольку связывание происходит как дополнительное с небольшим весом процесса.
+                    <br><strong>Высокопроизводительный:</strong> введение Just-In-Time компилятора, позволило получить высокую производительность.
+                    <br><strong>Распространенный:</strong> предназначен для распределенной среды интернета.
+                    <br><strong>Динамический:</strong> программирование на Java считается более динамичным, чем на C или C++, так как он предназначен для адаптации к меняющимся условиям. Программы могут выполнять обширное количество во время обработки информации, которая может быть использована для проверки и разрешения доступа к объектам на время выполнения.
 
-            <a class="btn" href="https://github.com/pages-themes/cayman">View on GitHub</a>
+                </p>
 
+                <router-link to="/lesson/1"><a class="waves-effect waves-light btn next-page btn-large pulse "><i class="material-icons right">arrow_forward</i>Урок №1</a></router-link>
 
-            <a class="btn" href="https://github.com/pages-themes/cayman/zipball/master">Download .zip</a>
-            <a class="btn" href="https://github.com/pages-themes/cayman/tarball/master">Download .tar.gz</a>
-
-        </header>
-
-        <main class="main-content" id="content" role="main">
-            <p>Text can be <strong>bold</strong>, <em>italic</em>, or
-                <del>strikethrough</del>
-                .
-            </p>
-
-            <p><a href="./another-page.html">Link to another page</a>.</p>
-
-            <p>There should be whitespace between paragraphs.</p>
-
-            <p>There should be whitespace between paragraphs. We recommend including a README, or a file with
-                information about your project.</p>
-
-            <h1 id="header-1">Header 1</h1>
-
-            <p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and
-                collaboration. It lets you and others work together on projects from anywhere.</p>
-
-            <h2 id="header-2">Header 2</h2>
-
-            <blockquote>
-                <p>This is a blockquote following a header.</p>
-
-                <p>When something is important enough, you do it even if the odds are not in your favor.</p>
-            </blockquote>
-
-            <h3 id="header-3">Header 3</h3>
-
-            <div class="language-js highlighter-rouge">
-                <div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
-<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span
-                            class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span
-                            class="p">)</span> <span class="p">{</span>
-  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span
-                            class="nx">require</span><span class="p">(</span><span class="s1">'./lang/'</span> <span
-                            class="o">+</span> <span class="nx">l</span><span class="p">)</span>
-  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-                </div>
-            </div>
-
-            <div class="language-ruby highlighter-rouge">
-                <div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
-<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span
-                            class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span
-                            class="o">|</span><span class="n">gem</span><span class="p">,</span> <span
-                            class="n">version</span><span class="o">|</span>
-  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span
-                            class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span
-                            class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span
-                            class="p">)</span>
-<span class="k">end</span>
-</code></pre>
-                </div>
-            </div>
-
-            <h4 id="header-4">Header 4</h4>
-
-            <ul>
-                <li>This is an unordered list following a header.</li>
-                <li>This is an unordered list following a header.</li>
-                <li>This is an unordered list following a header.</li>
-            </ul>
-
-            <h5 id="header-5">Header 5</h5>
-
-            <ol>
-                <li>This is an ordered list following a header.</li>
-                <li>This is an ordered list following a header.</li>
-                <li>This is an ordered list following a header.</li>
-            </ol>
-
-            <h6 id="header-6">Header 6</h6>
-
-            <table>
-                <thead>
-                <tr>
-                    <th style="text-align: left">head1</th>
-                    <th style="text-align: left">head two</th>
-                    <th style="text-align: left">three</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td style="text-align: left">ok</td>
-                    <td style="text-align: left">good swedish fish</td>
-                    <td style="text-align: left">nice</td>
-                </tr>
-                <tr>
-                    <td style="text-align: left">out of stock</td>
-                    <td style="text-align: left">good and plenty</td>
-                    <td style="text-align: left">nice</td>
-                </tr>
-                <tr>
-                    <td style="text-align: left">ok</td>
-                    <td style="text-align: left">good <code class="highlighter-rouge">oreos</code></td>
-                    <td style="text-align: left">hmm</td>
-                </tr>
-                <tr>
-                    <td style="text-align: left">ok</td>
-                    <td style="text-align: left">good <code class="highlighter-rouge">zoute</code> drop</td>
-                    <td style="text-align: left">yumm</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
-
-            <hr>
-
-            <h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
-
-            <ul>
-                <li>Item foo</li>
-                <li>Item bar</li>
-                <li>Item baz</li>
-                <li>Item zip</li>
-            </ul>
-
-            <h3 id="and-an-ordered-list">And an ordered list:</h3>
-
-            <ol>
-                <li>Item one</li>
-                <li>Item two</li>
-                <li>Item three</li>
-                <li>Item four</li>
-            </ol>
-
-            <h3 id="and-a-nested-list">And a nested list:</h3>
-
-            <ul>
-                <li>level 1 item
-                    <ul>
-                        <li>level 2 item</li>
-                        <li>level 2 item
-                            <ul>
-                                <li>level 3 item</li>
-                                <li>level 3 item</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>level 1 item
-                    <ul>
-                        <li>level 2 item</li>
-                        <li>level 2 item</li>
-                        <li>level 2 item</li>
-                    </ul>
-                </li>
-                <li>level 1 item
-                    <ul>
-                        <li>level 2 item</li>
-                        <li>level 2 item</li>
-                    </ul>
-                </li>
-                <li>level 1 item</li>
-            </ul>
-
-            <h3 id="small-image">Small image</h3>
-
-            <p><img alt="Octocat" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png"></p>
-
-            <h3 id="large-image">Large image</h3>
-
-            <p><img alt="Branching" src="https://guides.github.com/activities/hello-world/branching.png"></p>
-
-            <h3 id="definition-lists-can-be-used-with-html-syntax">Definition lists can be used with HTML syntax.</h3>
-
-            <dl>
-                <dt>Name</dt>
-                <dd>Godzilla</dd>
-                <dt>Born</dt>
-                <dd>1952</dd>
-                <dt>Birthplace</dt>
-                <dd>Japan</dd>
-                <dt>Color</dt>
-                <dd>Green</dd>
-            </dl>
-
-            <div class="highlighter-rouge">
-                <div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-</code></pre>
-                </div>
-            </div>
-
-            <div class="highlighter-rouge">
-                <div class="highlight"><pre class="highlight"><code>The final element.
-</code></pre>
-                </div>
             </div>
 
 
-            <footer class="site-footer">
-
-                <span class="site-footer-owner"><a href="https://github.com/pages-themes/cayman">cayman</a> is maintained by <a
-                        href="https://github.com/pages-themes">pages-themes</a>.</span>
-
-                <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
-            </footer>
-        </main>
+        </div>
 
 
     </template>
+
+    <template id="lesson1">
+        <div>
+            <header class="page-header" role="banner">
+                <h1 class="project-name">Урок №1</h1>
+            </header>
+            <div class="main-content">
+                <h1>Первая программа</h1>
+                <p>У программистов так заведено, что первая программа должна непременно выводит сообщение "Привет, мир"( в англ. Hello, world). Можете погуглить, почему именно так.
+                    Нас с вами больше интересует код, который это сделает:
+                </p>
+                <pre><code class="java hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyFirstJavaProgram</span> </span>{
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String []args)</span> </span>{
+   <span class="hljs-comment">/* Это первая моя java-программа. А также это пример многострочного коментария
+   Все что попало между /* и */ называется многострочный коментарий
+   В результате выполнения на экран будет выведено 'Привет мир!'
+   */</span>
+      System.out.println(<span class="hljs-string">"Привет мир!"</span>); <span class="hljs-comment">// Вывод сообщения на экран и пример однострочного коментария</span>
+   }
+}
+</code></pre>
+
+                <p>В коде выше нас интересуют 2 момента </p>
+                <p>1) Зеленым цветов выделены коментарии. Коментарии бывают однострочные и многострочные. Коментарии нужны программистам для каких-либо пометок и пояснений к коду. Программа во время запуска будет пропускать все коментарии, так как они не влияют на выполнения нашей программы и нужны лишь для пометок.</p>
+                <p>2) Строчка: </p>
+                <pre><code class="java hljs">System.out.println(<span class="hljs-string">"Привет мир!"</span>); <span class="hljs-comment">// Вывод сообщения на экран</span></code></pre>
+                <p>Первое время все результаты наших программ мы будем проверять используя данную функцию. Эта функция(System.out.println)  берет то, что в скобках и выводит на консоль.
+                    Ей по сути неважно, что вы ей передаете, она постарается все вывести - будь то строка, число или что посложнее. Остальное нас пока не особо интересует.
+                </p>
+                <h1>Целые числа</h1>
+                <p>Люди не очень любят дробные числа. Нам больше нравятся числа целые. С них и начнем. Некоторые примеры работы с целыми числами:</p>
+
+                <pre><code class="java hljs"><span class="hljs-keyword">int</span> a = <span class="hljs-number">100</span>;<span class="hljs-comment"> // Создаем целочисленную переменную а и инициализируем ее 100</span>
+<span class="hljs-keyword">int</span> sum = <span class="hljs-number">a + b</span>;<span class="hljs-comment"> // sum = 116</span>
+<span class="hljs-keyword">int</span> mult = <span class="hljs-number">a*b</span>;<span class="hljs-comment"> // mult = 1600</span>
+<span class="hljs-keyword">int</span> dif =  <span class="hljs-number">a - b</span>;<span class="hljs-comment"> // dif = 84</span>
+<span class="hljs-keyword">int</span> eg =  <span class="hljs-number">( a + b) * sum - mult</span>;<span class="hljs-comment"> //  eg = 11856</span></code></pre>
+
+
+                <h1>Строки</h1>
+                <p>На данном этапе мы просто рассмотрим данный тип данных для общего ознокомления. Строки являются важнейшей частью любого языка программирования, в том числе и языка Java. Основную работу будем делать с ними чуть позже. Некоторые примеры работы со строками:</p>
+                <pre><code class="java hljs">String str1 = <span class="hljs-string">"Магазин"</span>; <span class="hljs-comment">// Объявили строку</span>
+System.out.println(str1);<span class="hljs-comment">// Вывели объявленную строку на консоль</span>
+                </code></pre>
+
+
+                <h1>Логичексий тип boolean</h1>
+                <p>Данные тип данных является весьма интересным. Переменная типа boolean можешь хранить в себе либо true, либо false. Очевидно, что данный тип очень удобно использовать для проверки
+                каких-либо условий. В языке Java есть несколько операторов сравнения:
+                </p>
+                <table>
+                    <tbody><tr><td>Оператор</td><td>Описание</td></tr>
+                    <tr><td>==</td><td>Проверяет, равны или нет значения двух операндов, если да, то условие становится истинным</td></tr>
+                    <tr><td>!=</td><td>Проверяет, равны или нет значения двух операндов, если значения не равны, то условие становится истинным</td></tr>
+                    <tr><td>&gt;</td><td>Проверяет, является ли значение левого операнда больше, чем значение правого операнда, если да, то условие становится истинным</td></tr>
+                    <tr><td>&lt;</td><td>Проверяет, является ли значение левого операнда меньше, чем значение правого операнда, если да, то условие становится истинным</td></tr>
+                    <tr><td>&gt;=</td><td>Проверяет, является ли значение левого операнда больше или равно значению правого операнда, если да, то условие становится истинным</td></tr>
+                    <tr><td>&lt;=</td><td>Проверяет, если значение левого операнда меньше или равно значению правого операнда, если да, то условие становится истинным</td></tr>
+                    </tbody>
+                </table>
+                <p>Примеры использования операторов сравнения:</p>
+                <pre><code class="java hljs"><span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">int</span> b = <span class="hljs-number">20</span>;
+<span class="hljs-keyword">boolean</span> res1 = <span class="hljs-number">(a == b)</span>;<span class="hljs-comment">// Читается как а равно равно b</span>
+<span class="hljs-keyword">boolean</span> res2 = <span class="hljs-number">(a != b)</span>;<span class="hljs-comment">// Читается как а не равно равно b</span>
+<span class="hljs-keyword">boolean</span> res3 = <span class="hljs-number">(a &gt; b)</span>;<span class="hljs-comment">// Вообще говоря, скобки здесь не обязательны, но так нагляднееи понятнее</span>
+<span class="hljs-keyword">boolean</span> res4 = <span class="hljs-number">(a &lt; b)</span>;
+<span class="hljs-keyword">boolean</span> res5 = <span class="hljs-number">(b &gt;= a)</span>;
+<span class="hljs-keyword">boolean</span> res5 = <span class="hljs-number">(b &lt;= a)</span>;
+System.out.println(res1);<span class="hljs-comment">// Выведет false</span>
+System.out.println(res2);<span class="hljs-comment">// Выведет true</span>
+System.out.println(res3);<span class="hljs-comment">// Выведет false</span>
+System.out.println(res4);<span class="hljs-comment">// Выведет true</span>
+System.out.println(res5);<span class="hljs-comment">// Выведет true</span>
+System.out.println(res6);<span class="hljs-comment">// Выведет false</span></code></pre>
+                <p>Вообще говоря, необязательно всегда результат выполнения чего-либо сохранять в переменную. Код ниже выведет на консоль точно то, что и код выше:</p>
+                <pre><code class="java hljs"><span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">int</span> b = <span class="hljs-number">20</span>;
+System.out.println(<span class="hljs-number">(a == b)</span>);<span class="hljs-comment">// Выведет false</span>
+System.out.println(<span class="hljs-number">(a != b)</span>);<span class="hljs-comment">// Выведет true</span>
+System.out.println(<span class="hljs-number">(a &gt; b)</span>);<span class="hljs-comment">// Выведет false</span>
+System.out.println(<span class="hljs-number">(a &lt; b)</span>);<span class="hljs-comment">// Выведет true</span>
+System.out.println(<span class="hljs-number">(b &gt;= a)</span>);<span class="hljs-comment">// Выведет true</span>
+System.out.println(<span class="hljs-number">(b &lt;= a)</span>);<span class="hljs-comment">// Выведет false</span></code></pre>
+                <h1>Оператор if</h1>
+                <p>Условный оператор if часто применяется программистами и имеется во всех языках программирования. Оператор if позволяет вашей программе в зависимости от условий выполнить оператор или группу операторов, основываясь на значении булевой переменной или выражения. Используется опертор if следующим образом:</p>
+                <pre><code class="java hljs"><span class="hljs-keyword">if</span>(Логическое выражение)
+{
+   <span class="hljs-comment">//Выполняется, если истинно</span>
+} <span class="hljs-keyword">else</span>{
+   <span class="hljs-comment">//Выполняется, если ложно</span>
+}
+</code></pre>
+                <p>Логическое выражение в данном случае ничто иное как boolean. То есть мы можем в if передавать как и перменную типа boolean, так и целое выражение. Пример:</p>
+                <pre><code class="java hljs"><span class="hljs-keyword">int</span> x = <span class="hljs-number">30</span>;
+<span class="hljs-keyword">if</span>( x &lt; <span class="hljs-number">20</span> ){
+    System.out.print(<span class="hljs-string">"Условие в if'е true"</span>);
+} <span class="hljs-keyword">else</span> {
+    System.out.print(<span class="hljs-string">"Условие в if'е false"</span>);
+}</code></pre>
+
+                <p> Также в Java имеются логические операторы. Это операторы, которые позволяют комбинировать условия. Сначала обратимся к теории: </p>
+                <table>
+                    <tbody><tr><td>Оператор</td><td>Описание</td></tr>
+                    <tr><td>&amp;&amp;</td><td>Называется логический оператор «И». Если оба операнда являются true, то условие становится тоже true. Иначе false</td></tr>
+                    <tr><td>||</td><td>Называется логический оператор «ИЛИ». Если оба операнда false, то условие становится false. Иначе true</td></tr>
+                    <tr><td>!</td><td>Называется логический оператор «НЕ». Использование меняет логическое состояние своего операнда. Если условие имеет значение true, то оператор логического «НЕ» будет делать false</td></tr>
+                    </tbody>
+                </table>
+                <p>Примеры:</p>
+                <pre><code class="java hljs"><span class="hljs-keyword">boolean</span> a = <span class="hljs-keyword">true</span>;
+<span class="hljs-keyword">boolean</span> b = <span class="hljs-keyword">false</span>;
+
+System.out.println( (a&amp;&amp;b)); <span class="hljs-comment">// Выведет false</span>
+System.out.println( (a||b) ); <span class="hljs-comment">// Выведет true</span>
+System.out.println(!(a &amp;&amp; b)); <span class="hljs-comment">// Выведет true</span>
+
+<span class="hljs-keyword">int</span> x = <span class="hljs-number">30</span>;
+<span class="hljs-keyword">int</span> y = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">if</span>( x + y &lt; <span class="hljs-number">50</span> &amp;&amp; x*y &lt; 250){
+    System.out.print(<span class="hljs-string">"Сумма чисел меньше 50 <strong>и</strong> произведение меньше 250 - Условие в if'е true"</span> );
+} <span class="hljs-keyword">else</span> {
+    System.out.print(<span class="hljs-string">"Условие в if'е false"</span>);
+}
+
+
+</code></pre>
+                <p>Теория закочнилась, можем приступупать к заданиям:</p>
+                <blockquote>
+                    <p>1. Даны два числа. Если их сумма больше их произведения, то вывести на консоль первое число. Иначе второе.</p>
+                    <p>(например даны числа 2, 5. Сумма = 7, произведение = 10. Значит надо вывести 5)</p>
+                </blockquote>
+
+                <blockquote>
+                    <p>2. Даны три числа. Надо выяснить, можно ли из них составить треугольник.</p>
+                    <p>(Напоминание: Каждая сторона треуголька должна быть меньше суммы двух других)</p>
+                    <p>(Например даны числа 2, 3, 4 -  проверим стороны: 4 меньше чем 2+3=5. 3 меньше чем 4+2.2 меньше чем 4+3. Значит из этих чисел можно составить треугольник. Выводим true)</p>
+                    <p>(Например даны числа 1, 3, 5 - проверим стороны: 5 больше чем 1+3=4. Значит треугольник составить нельзя. Выводим false)</p>
+                </blockquote>
+
+                <blockquote>
+                    <p>3. Даны 3 числа. Узнать, если ли среди них равные.</p>
+                    <p>(например даны числа 4, 6, 7. Равных нет. Программа должна вернуть false либо вывести на консоль "Равных нет".)</p>
+                    <p>(например даны числа 5, 5, 8. Равные есть. Программа должна вернуть true либо вывести на консоль "Равные есть".)</p>
+                </blockquote>
+
+                <blockquote>
+                    <p>4. Даны 3 числа. Найти максимальное из них.</p>
+                    <p>(например даны числа 2, 5, 10. Значит надо вывести 10)</p>
+                </blockquote>
+
+                <blockquote>
+                    <p>5. Даны три числа. Найти максималдьное попарное произведение этих чисел.</p>
+                    <p>( например даны числа 1, 3, 5. Парные произведения - 1*3 = 3, 3*5 = 15, 1*5 = 5. Значит надо вернуть 15.)</p>
+                </blockquote>
+
+
+            </div>
+
+        </div>
+    </template>
+
+    <template id="lesson2">
+        <div>
+            <header class="page-header" role="banner">
+                <h1 class="project-name">Урок №2</h1>
+            </header>
+        </div>
+    </template>
+
+    <template id="lesson3">
+        <div>
+            <header class="page-header" role="banner">
+                <h1 class="project-name">Урок №3</h1>
+            </header>
+        </div>
+    </template>
+
 </body>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
