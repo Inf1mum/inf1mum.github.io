@@ -289,8 +289,8 @@ myList = <span class="hljs-keyword">new int</span>[10]; <span class="hljs-commen
 }
 </code></pre>
 
-                <p>Задания:</p>
-                <p>Секция 1</p>
+                <h1>Задания:</h1>
+                <h2>Секция 1</h2>
                 <blockquote>
                     <p>1. Создать массив, заполненный только четными числами. Вывести его на консоль.(Ответ - {2,4,6,8,10})</p>
                 </blockquote>
@@ -304,7 +304,7 @@ myList = <span class="hljs-keyword">new int</span>[10]; <span class="hljs-commen
                 </blockquote>
 
 
-                <p>Секция 2</p>
+                <h2>Секция 2</h2>
                 <blockquote>
                     <p>1. Дан массив чисел. Вывести сумму всех элементов данного массива</p>
                     <p>(например дан массив {2, 5, 6}. Сумма = 13. Значит надо вывести 13)</p>
@@ -336,7 +336,7 @@ myList = <span class="hljs-keyword">new int</span>[10]; <span class="hljs-commen
                 </blockquote>
 
                 <blockquote>
-                    <p>6. Дан массив чисел. Вернуть массив, полученный из исходного путем удаления всех повторяющихся чисел </p>
+                    <p>7. Дан массив чисел. Вернуть массив, полученный из исходного путем удаления всех повторяющихся чисел </p>
                     <p>( например дан массив {2, 5, 6, 6, 5, 1, 5, 6, 2}. Повторяются числа 5, 6, 2. В ответ выводим - {2, 5, 6, 1}</p>
                 </blockquote>
 
@@ -349,11 +349,86 @@ myList = <span class="hljs-keyword">new int</span>[10]; <span class="hljs-commen
     </template>
 
     <template id="lesson3">
-        <div>
+         <div>
             <header class="page-header" role="banner">
                 <h1 class="project-name">Урок №3</h1>
             </header>
-        </div>
+            <div class="main-content">
+                <h1>Строки</h1>
+                <p><strong>Строки</strong> — представляют собой последовательность символов. Строки в Java используются достаточно часто. В данном разделе мы постараемся научится работать со строками и символами</p>
+                <p>Как было сказано ранее, строки состоят из символов. Некоторые примеры работы с символами в Java:</p>
+                <pre><code class="java hljs">
+<span class="hljs-comment">// Одиночный символ</span>                
+<span class="hljs-keyword">char</span> ch = <span class="hljs-string">'a'</span>;
+
+<span class="hljs-comment">// Массив символов</span>
+<span class="hljs-keyword">char</span>[] charArray ={ <span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span> };
+</code></pre>
+				
+				<p>Строки в Java можно создавать по-разному. Их можно создавать напрямую, можно из массива символов. Примеры создания строк:</p>
+				
+				<pre><code class="java hljs"><span class="hljs-comment">// Простое создание строки - напрямую</span>  
+String greeting = <span class="hljs-string">"Здравствуй, мир!"</span>;
+				
+<span class="hljs-keyword">char</span>[] helloArray = { <span class="hljs-string">'П'</span>, <span class="hljs-string">'р'</span>, <span class="hljs-string">'и'</span>, <span class="hljs-string">'в'</span>, <span class="hljs-string">'е'</span>, <span class="hljs-string">'т'</span>, <span class="hljs-string">'.'</span>};
+<span class="hljs-comment">// Создаем строку из массива символов</span> 
+String helloString = <span class="hljs-keyword">new</span> String(helloArray);  
+System.out.println(helloString);  
+</code></pre>
+
+			<p>Обратите внимание, что строки задаются в двойных ковычках(" "), а символы в одинарных(' ')</p>
+			
+			<p>В секции 1 вам понадобится использовать как строки, так и символы. В секции 2 мы полностью скоцентрируемся на строках. Само собой, никто вам не запрещает использвать в секции 2 символы.
+			<h1>Задания:</h1>
+            <h2>Секция 1 - строки и символы</h2>
+            <blockquote>
+                <p>1. Дана строка. Заменить все символы X на символ Y.</p>
+                <p>(например дана строка "abarty3452sdg" и даны два символа 'a' и 'q'. Ответ "qbqrty3452sdg")</p>
+            </blockquote>
+
+            <blockquote>
+                <p>2. Дана строка. Найти кол-во вхождений в строку символа X.</p>
+                <p>(например дана строка "abart12ag" и даны символа 'a'. Ответ 3)</p>
+            </blockquote>
+
+            <blockquote>
+                <p>3. Проверить, является ли строка палиндромом( читается слева и справа одинаково).</p>
+                <p>(например дана строка "abart12ag". Ответ false)</p>
+                <p>(например дана строка "aba4aba". Ответ true)</p>
+            </blockquote>
+            
+            <blockquote>
+                <p>4. Дана строка. Удалить все символы X.</p>
+                <p>(например дана строка "abart12ag" и символ 'a'. Ответ "brt12g")</p>
+            </blockquote>
+            
+            
+            <h2>Секция 2 - строки</h2>
+            <blockquote>
+                <p>1. Дана строка. Заменить все подстроки X на подстроки Y.</p>
+                <p>(например дана строка "abarty3452aba" и даны две подстроки "aba" и "qw1". Ответ "qw1rty3452qw1")</p>
+                <p>(например дана строка "qwe2143qwf4qwdf" и даны две подстроки "qw" и "9". Ответ "9e21439f49df")</p>
+            </blockquote>
+            
+            <blockquote>
+                
+            </blockquote>
+            
+            <h2>Секция 3 - ужас какие сложные задания</h2>
+            <blockquote>
+                <p>1. Дана строка. Разбить ее массив подстрок, используя как разделитесь строку X.</p>
+                <p>(например дана строка "abar,ty345,2aba" и дана строка ",". Ответ {"abar", "ty345", "2aba"})</p>
+            </blockquote>
+            
+            <blockquote>
+                <p>2. Даны две строки. Найти их максимальное(максимально длинное) пересечение.</p>
+                <p>(например дана строка "fdsg356ergdrt" и дана строка "inkiuh356enu=". Ответ "356e")</p>
+            </blockquote>
+            
+            
+            </div>
+     
+         </div>
     </template>
 
 </body>
