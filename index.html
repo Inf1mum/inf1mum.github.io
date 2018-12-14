@@ -378,6 +378,68 @@ System.out.println(helloString);
 
 			<p>Обратите внимание, что строки задаются в двойных ковычках(" "), а символы в одинарных(' ')</p>
 			
+			<h1>Функции работы со строками</h1>
+			<p>Существует достаточно много функций для работы со строками. Я дам краткое описания для каждой. Более подробнее можете почить в любом источнике. Мы с вами рассмотрим наиболее часто используемые и которые могут нам пригодится. </p>
+			
+			<h2>1. Длина строки - функция <strong>lenght()</strong>. Пример:</h2>
+			<pre><code class="java hljs">String s = <span class="hljs-string">"Я стану отличным программистом!"</span>;
+<span class="hljs-keyword">int</span> len = s.length(); 
+System.out.println( <span class="hljs-string">"Длина строки: "</span> + len);
+</code></pre>
+			
+			<h2>2. Объеденение двух строк - функция <strong>concat() или +</strong>. Пример:</h2>
+			<pre><code class="java hljs">String s1 = <span class="hljs-string">Привет, "</span>;
+String s2 = <span class="hljs-string">"мир!"</span>;			
+String s3 = s1.concat(s2);
+String s4 = s1 + s2;   
+      
+System.out.println(s3);
+System.out.println(s4);</code></pre>
+			
+			
+			<h2>3. Получение символа из строки - функция <strong>charAt()</strong>. Пример:</h2>
+			<pre><code class="java hljs">String s = <span class="hljs-string">"Привет-привет и пока-пока"</span>;
+<span class="hljs-keyword">char</span> result1 = s.charAt(<span class="hljs-number">8</span>);
+<span class="hljs-keyword">char</span> result2 = s.charAt(<span class="hljs-number">11</span>);
+System.out.println(<span class="hljs-string">"Восьмой символ строки - "</span> + result1);
+System.out.println(<span class="hljs-string">"Одиннадцатый символ строки - "</span> + result2);</code></pre>
+			
+			<h2>4. Сравнение двух строк - функция <strong>equals()</strong>. Пример:</h2>
+<pre><code class="java hljs">String Str1 = <span class="hljs-string">"Дерево"</span>;
+String Str2 = <span class="hljs-string">"Не дерево"</span>;
+String Str3 = <span class="hljs-keyword">new</span> String(<span class="hljs-string">"Дерево"</span>);
+<span class="hljs-keyword">boolean</span> retVal;
+
+retVal = Str1.equals(Str2);
+System.out.println(<span class="hljs-string">"Строка Str1 равна строке Str2? Ответ: "</span> + retVal );
+
+retVal = Str1.equals(Str3);
+System.out.println(<span class="hljs-string">"Строка Str1 равна строке Str3? Ответ: "</span> + retVal );
+   }
+}
+</code></pre>			
+			<h2>5. Поиск индекса первого вхождения данной подстроки(или симовла) в исходную строку функция - <strong>indexOf()</strong>. Пример: </h2>
+<pre><code class="java hljs">String str = <span class="hljs-keyword">new</span> String(<span class="hljs-string">"Один в поле не воин"</span>);
+String str1 = <span class="hljs-keyword">new</span> String(<span class="hljs-string">"не"</span>);
+
+System.out.print(<span class="hljs-string">"Найденный индекс: "</span> + str.indexOf(<span class="hljs-string">'л'</span>));
+System.out.print(<span class="hljs-string">"Найденный индекс: "</span> + str.indexOf(subStr1));</code></pre>
+
+
+			<h2>6. Замена всех символов(или подстрок) на данную в исходной строке - функции <strong>replace() и replaceAll()</strong>. Пример: </h2>
+			<pre><code class="java hljs">String Str = <span class="hljs-keyword">new</span> String(<span class="hljs-string">"Семеро одного не ждут, но это не точно"</span>);
+System.out.print(<span class="hljs-string">"Возвращаемое значение: "</span> + Str.replace(<span class="hljs-string">'о'</span>, <span class="hljs-string">'а'</span>));
+
+
+System.out.print(<span class="hljs-string">"Возвращаемое значение: "</span> );
+System.out.println(Str.replace(<span class="hljs-string">'о'</span>, <span class="hljs-string">'а'</span>));
+
+</code></pre>
+			
+			<h2>7. Вырезать из исходной строки кусок - функция <strong>substring()</strong>. Пример: </h2>
+			
+			<h2>8. Разбиение строки на массив строк, используя заданный разделитель - функция <strong>split()</strong>. Пример: </h2>
+			
 			<p>В секции 1 вам понадобится использовать как строки, так и символы. В секции 2 мы полностью скоцентрируемся на строках. Само собой, никто вам не запрещает использвать в секции 2 символы.
 			<h1>Задания:</h1>
             <h2>Секция 1 - строки и символы</h2>
@@ -385,7 +447,7 @@ System.out.println(helloString);
                 <p>1. Дана строка. Заменить все символы X на символ Y.</p>
                 <p>(например дана строка "abarty3452sdg" и даны два символа 'a' и 'q'. Ответ "qbqrty3452sdg")</p>
             </blockquote>
-
+            
             <blockquote>
                 <p>2. Дана строка. Найти кол-во вхождений в строку символа X.</p>
                 <p>(например дана строка "abart12ag" и даны символа 'a'. Ответ 3)</p>
@@ -409,24 +471,32 @@ System.out.println(helloString);
             
             
             <h2>Секция 2 - строки</h2>
+                       
+             <blockquote>
+                <p>1. Дана строка. Разбить ее массив подстрок, используя как разделитесь строку X.</p>
+                <p>(например дана строка "abar,ty345,2aba" и дана строка ",". Ответ {"abar", "ty345", "2aba"})</p>
+            </blockquote>
+            
+             <blockquote>
+                <p>2. Дана строка. Заменить все подстроки X на подстроки Y.</p>
+                <p>(например дана строка "abarty3452aba" и даны две подстроки "aba" и "qw1". Ответ "qw1rty3452qw1")</p>
+                <p>(например дана строка "qwe2143qwf4qwdf" и даны две подстроки "qw" и "9". Ответ "9e21439f49df")</p>
+            </blockquote>
+            
+            <h2>Секция 3 - ужас какие сложные задания</h2>
             <blockquote>
-                <p>1. Дана строка. Заменить все подстроки X на подстроки Y.</p>
+                <p>1. Дана строка. Разбить ее массив подстрок, используя как разделитесь строку X.( не используя функцию split)</p>
+                <p>(например дана строка "abar,ty345,2aba" и дана строка ",". Ответ {"abar", "ty345", "2aba"})</p>
+            </blockquote>
+            
+            <blockquote>
+                <p>2. Дана строка. Заменить все подстроки X на подстроки Y.( не используя функию replaceAll)</p>
                 <p>(например дана строка "abarty3452aba" и даны две подстроки "aba" и "qw1". Ответ "qw1rty3452qw1")</p>
                 <p>(например дана строка "qwe2143qwf4qwdf" и даны две подстроки "qw" и "9". Ответ "9e21439f49df")</p>
             </blockquote>
             
             <blockquote>
-                
-            </blockquote>
-            
-            <h2>Секция 3 - ужас какие сложные задания</h2>
-            <blockquote>
-                <p>1. Дана строка. Разбить ее массив подстрок, используя как разделитесь строку X.</p>
-                <p>(например дана строка "abar,ty345,2aba" и дана строка ",". Ответ {"abar", "ty345", "2aba"})</p>
-            </blockquote>
-            
-            <blockquote>
-                <p>2. Даны две строки. Найти их максимальное(максимально длинное) пересечение.</p>
+                <p>3. Даны две строки. Найти их максимальное(максимально длинное) пересечение.</p>
                 <p>(например дана строка "fdsg356ergdrt" и дана строка "inkiuh356enu=". Ответ "356e")</p>
             </blockquote>
             
