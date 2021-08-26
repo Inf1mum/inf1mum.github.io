@@ -19,6 +19,7 @@
                 <li class="bold waves-effect waves-teal"><router-link to="/lesson/2">Урок №2</router-link></li>
                 <li class="bold waves-effect waves-teal"><router-link to="/lesson/3">Урок №3</router-link></li>
                 <li class="bold waves-effect waves-teal"><router-link to="/lesson/4">Урок №4</router-link></li>
+                <li class="bold waves-effect waves-teal"><router-link to="/lesson/5">Урок №5</router-link></li>
 
             </ul>
         </div>
@@ -432,7 +433,8 @@ String str4 = <span class="hljs-keyword">new</span> String(charArray); <span cla
                     Иногда строку удобно рассматривать как массив символов для работы с ней. Также сами строки имеют встроенные методы для облегчения работы с ними. Основные методы для работы со строками:
                 </p>
 
-                <pre><code><span class="hljs-keyword">char</span> c = str1.charAt(2); <span class="hljs-comment">// символ c индексом 2 - v</span>
+                <pre><code>String str1 = <span class="hljs-string">"Java is the best"</span>;
+<span class="hljs-keyword">char</span> c = str1.charAt(2); <span class="hljs-comment">// символ c индексом 2 - v</span>
 <span class="hljs-keyword">boolean</span> contains = str1.contains(<span class="hljs-string">"C++"</span>); <span class="hljs-comment">// содержится ли подстрока в строке - false</span>
 <span class="hljs-keyword">int</span> index = str1.indexOf(<span class="hljs-string">"s"</span>); <span class="hljs-comment">// индекс первого вхождения подстоки в строку - 6</span>
 <span class="hljs-keyword">int</span> lastIndex = str1.lastIndexOf(<span class="hljs-string">"s"</span>); <span class="hljs-comment">// индекс последнего вхождения подстоки в строку - 14</span>
@@ -457,11 +459,6 @@ String substring = str1.substring(0, 4);
                 <blockquote>
                     <p>2. Дана строка состоящая из слов. Слова в строке отделяются друг от друга одним пробелом. Написать программу, вычисляющую среднюю длину слов в строке.</p>
                     <p>(например строка "Lorem ipsum dolor sit amet consectetur". Средняя длина - 5,5)</p>
-                </blockquote>
-
-                <blockquote>
-                    <p>3. Дана строка состоящая из слов. Слова в строке отделяются друг от друга одним пробелом. Удалить из строки самое длинное слово</p>
-                    <p>(например строка "Lorem ipsum dolor sit amet consectetur". Строка после удаления слова - "Lorem ipsum dolor sit amet ")</p>
                 </blockquote>
 
                 <blockquote>
@@ -500,6 +497,20 @@ String substring = str1.substring(0, 4);
             </header>
             <div class="main-content">
                 <h1>Классы</h1>
+            </div>
+        </div>
+    </template>
+
+    <template id="lesson5">
+        <div>
+            <header class="page-header" role="banner">
+                <h1 class="project-name">Урок №5</h1>
+            </header>
+            <div class="main-content">
+                <h1>Регулярные выражения</h1>
+                <p>
+                    Теория - https://metanit.com/java/tutorial/7.4.php
+                </p>
             </div>
         </div>
     </template>
