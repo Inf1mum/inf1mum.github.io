@@ -6,6 +6,8 @@ var lesson2 = Vue.extend({  template: '#lesson2'});
 var lesson3 = Vue.extend({  template: '#lesson3'});
 var lesson4 = Vue.extend({  template: '#lesson4'});
 var lesson5 = Vue.extend({  template: '#lesson5'});
+var lesson6 = Vue.extend({  template: '#lesson6'});
+
 
 
 
@@ -16,7 +18,8 @@ var router = new VueRouter({
     {path: '/lesson/2', component: lesson2},
     {path: '/lesson/3', component: lesson3},
     {path: '/lesson/4', component: lesson4},
-    {path: '/lesson/5', component: lesson5}
+    {path: '/lesson/5', component: lesson5},
+    {path: '/lesson/6', component: lesson6}
   ]});
 
 
